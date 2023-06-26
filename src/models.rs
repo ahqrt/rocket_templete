@@ -15,7 +15,7 @@ pub struct NewRustacean {
     pub email: String,
 }
 
-#[derive(Queryable)]
+#[derive(Queryable, Associations)]
 
 pub struct Crate {
     pub id: i32,

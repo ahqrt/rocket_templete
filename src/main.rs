@@ -4,6 +4,7 @@ extern crate rocket;
 extern crate diesel;
 
 mod models;
+mod repositories;
 mod schema;
 
 #[get("/")]
