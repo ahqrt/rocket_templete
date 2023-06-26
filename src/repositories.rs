@@ -28,8 +28,7 @@ impl RustaceanRepository {
                 rustaceans::email.eq(rustacean.email),
                 rustaceans::name.eq(rustacean.name),
             ))
-            .execute(conn)?;
-        Self::find(conn, id)
+            .get_result(conn)
     }
 
     pub fn delete(conn: &PgConnection, id: i32) -> QueryResult<usize> {
@@ -66,8 +65,7 @@ impl CrateRepository {
                 crates::version.eq(a_crate.version),
                 crates::description.eq(a_crate.description),
             ))
-            .execute(conn)?;
-        Self::find(conn, id)
+            .get_result(conn)
     }
 
     pub fn delete(conn: &PgConnection, id: i32) -> QueryResult<usize> {

@@ -1,4 +1,5 @@
 use crate::schema::*;
+use serde::{Deserialize, Serialize};
 
 #[derive(Queryable)]
 pub struct Rustacean {
